@@ -3,18 +3,18 @@
 Este proyecto implementa una API RESTful desarrollada con **FastAPI** y **SQLModel** que cumple con todos los requisitos de la prueba técnica. A continuación, se detallan las funcionalidades disponibles:
 
 ### 👤 Usuarios
-- `POST /users`: Registrar un nuevo usuario
-- `POST /users/login`: Iniciar sesión y obtener un token JWT
-- `GET /users/me`: Obtener el perfil del usuario autenticado
-- `PUT /users/me`: Actualizar nombre, correo o contraseña
-- `DELETE /users/me`: Eliminar cuenta del usuario autenticado
+- `POST /api/users`: Registrar un nuevo usuario
+- `POST /api//users/login`: Iniciar sesión y obtener un token JWT
+- `GET /api//users/me`: Obtener el perfil del usuario autenticado
+- `PUT /api//users/me`: Actualizar nombre, correo o contraseña
+- `DELETE /api//users/me`: Eliminar cuenta del usuario autenticado
 
 ### 🛒 Productos
-- `POST /products`: Crear un nuevo producto (**requiere autenticación**)
-- `GET /products`: Listar todos los productos (público)
-- `GET /products/{id}`: Obtener un producto por su ID
-- `PUT /products/{id}`: Actualizar un producto (**requiere autenticación**)
-- `DELETE /products/{id}`: Eliminar un producto (**requiere autenticación**)
+- `POST /api//products`: Crear un nuevo producto (**requiere autenticación**)
+- `GET /api//products`: Listar todos los productos (público)
+- `GET /api//products/{id}`: Obtener un producto por su ID
+- `PUT /api//products/{id}`: Actualizar un producto (**requiere autenticación**)
+- `DELETE /api//products/{id}`: Eliminar un producto (**requiere autenticación**)
 
 ### 🧾 Compras
 - `POST /purchases`: Registrar una compra (**requiere autenticación**)  
