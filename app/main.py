@@ -4,6 +4,7 @@ from app.db.database import init_db
 from app.api import user
 from app.api import product
 from app.api import purchase
+from fastapi.middleware.cors import CORSMiddleware
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -16,6 +17,17 @@ app = FastAPI(
     title="Prueba Técnica Auxiliar de Programación",
     version="1.0.0",
     lifespan=lifespan
+)
+# CORS configuration
+origins = [
+    "http://localhost:4200" 
+]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,            
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 # Include routers for user, product and purchase APIs
 app.include_router(user.router, prefix="/api/users", tags=["Usuarios"])
