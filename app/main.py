@@ -20,7 +20,8 @@ app = FastAPI(
 )
 # CORS configuration
 origins = [
-    "http://localhost:4200" 
+    "http://localhost:4200",
+    "https://prueba-frontend-angular-emza.vercel.app/" 
 ]
 app.add_middleware(
     CORSMiddleware,
