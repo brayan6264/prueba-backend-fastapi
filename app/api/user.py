@@ -24,7 +24,7 @@ def register_user(user: UserCreate, session: Session = Depends(get_session)):
 def login_user(data: UserLogin, session: Session = Depends(get_session)):
     user = authenticate_user(data.email, data.password, session)
     token = create_access_token({"sub": str(user.user_id)})
-    return JSONResponse(content={"access_token": token, "token_type": "bearer"})
+    return JSONResponse(content={"access_token": token, "token_type": "bearer","user_id": str(user.user_id)})
 
 
 @router.get("/me", response_model=UserRead)
