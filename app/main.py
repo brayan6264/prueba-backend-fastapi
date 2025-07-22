@@ -21,9 +21,9 @@ app = FastAPI(
 # CORS configuration
 origins = [
     "http://localhost:4200",
-    "https://prueba-frontend-angu-git-d76157-brayan-gomezs-projects-5ed712a3.vercel.app/" ,
-    "prueba-frontend-angular-emza.vercel.app",
-    "prueba-frontend-angular-emza-nyfgxfr5o.vercel.app"
+    "https://prueba-frontend-angu-git-d76157-brayan-gomezs-projects-5ed712a3.vercel.app",
+    "https://prueba-frontend-angular-emza.vercel.app",
+    "https://prueba-frontend-angular-emza-nyfgxfr5o.vercel.app",
 ]
 app.add_middleware(
     CORSMiddleware,
